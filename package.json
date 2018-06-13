@@ -1,0 +1,16 @@
+{
+  "name": "obniz-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^10.3.2",
+    "canvas": "^2.0.0",
+    "obniz": "^1.4.4",
+    "ts-node": "^6.1.1",
+    "typescript": "^2.9.1"
+  },
+  "scripts": {
+    "start": "ts-node ./src/scripts/index.ts"
+  }
+}

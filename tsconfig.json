@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": true,
+    "noStrictGenericChecks": true,
+    "declaration": true,
+    "declarationMap": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "node_modules",
+    "__tests__"
+  ]
+}
