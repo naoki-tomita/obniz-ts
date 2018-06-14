@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/node": "^10.3.2",
     "canvas": "^2.0.0-alpha.12",
+    "gif-frames": "^0.4.0",
     "obniz": "^1.4.4",
     "ts-node": "^6.1.1",
     "typescript": "^2.9.1"
