@@ -58,7 +58,7 @@ buffer-from@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.0.tgz#87fcaa3a298358e0ade6e442cfce840740d1ad04"
 
-canvas@^2:
+canvas@^2.0.0:
   version "2.0.0-alpha.12"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.0.0-alpha.12.tgz#01ae4efc037b982be561b17f3c9707f95c544a90"
   dependencies:

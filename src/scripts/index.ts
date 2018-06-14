@@ -1,5 +1,5 @@
 import { createCanvas } from "canvas";
-import { Obniz } from "./Wrapper/Obniz";
+import { Obniz } from "./wrapper/Obniz";
 
 async function main() {
   const obniz = new Obniz("1849-4311");
