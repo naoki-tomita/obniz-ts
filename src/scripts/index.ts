@@ -1,21 +1,28 @@
 import { createCanvas, Image } from "canvas";
 import { initializeObniz } from "./wrapper/Obniz";
+import { config } from "dotenv";
 
 const gifFrames = require("gif-frames");
 
+config();
+
 async function main() {
-  const obniz = await initializeObniz("1849-4311")
+  const obniz = await initializeObniz(process.env.OBNIZ_SERIAL_ID as string);
   const canvas = createCanvas(128, 64);
   const ctx = canvas.getContext("2d");
   if (ctx) {
-    let x = 0;
-    setInterval(async () => {
+    const arr: any[] = [];
+    for (let i = 0; i < 100; i++) {
       const frame = await gifFrames({
         url: "./image.gif",
-        frames: x,
+        frames: i,
         outputType: "png",
       });
-      const image = frame[0].getImage();
+      arr.push(frame[0].getImage());
+    }
+    let x = 0;
+    setInterval(async () => {
+      const image = arr[x];
       const binary = image.data;
       const width = image.width;
       const height = image.height;
@@ -30,7 +37,7 @@ async function main() {
           ctx.fillRect(x, y, 1, 1);
         }
       }
-      x = (x + 1) % 100;
+      x = (x + 1) % arr.length;
       obniz.display.draw(ctx);
     }, 1000/10);
   }
